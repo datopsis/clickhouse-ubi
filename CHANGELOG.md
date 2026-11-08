@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Per-architecture runtime RPM lock with exact NEVRAs, Red Hat URLs, SHA-256
+  verification, offline dependency installation, base-pin consistency checks,
+  and a read-only workflow that uploads reproducible lock proposals for review.
+
 - Restricted OpenShift qualification fixtures, policy tests, full operator procedure, and architecture diagram.
 - Security-control/SCTM planning, FIPS and host-support boundaries, and a repository-native SVG architecture suite.
 - Initial Red Hat UBI 9 Micro packaging for ClickHouse Server.

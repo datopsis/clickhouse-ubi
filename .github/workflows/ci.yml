@@ -40,6 +40,9 @@ jobs:
       - name: Run repository checks
         run: pre-commit run --all-files --show-diff-on-failure
 
+      - name: Validate runtime RPM lock and base pins
+        run: python .github/scripts/check_artifact_lock.py
+
       - name: Test release tag validation
         run: bash tests/release-tag.sh
 

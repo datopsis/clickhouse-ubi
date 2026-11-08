@@ -3,11 +3,20 @@
 ARG UBI_MINIMAL_IMAGE="registry.access.redhat.com/ubi9/ubi-minimal:9.8@sha256:4b79c93106c14ad1c234907f83441ff0e4f8d24e78426a36e159098e9f7e6fa5"
 ARG UBI_MICRO_IMAGE="registry.access.redhat.com/ubi9/ubi-micro:9.8@sha256:6d9eff186ce3ccf399c1835265e7fd3f83bd112cc3422da2d39fd44e234aab59"
 
+FROM ${UBI_MICRO_IMAGE} AS microbase
+
 FROM ${UBI_MINIMAL_IMAGE} AS builder
 
 ARG CLICKHOUSE_VERSION="26.8.2.7"
 ARG CLICKHOUSE_CHANNEL="stable"
 ARG TARGETARCH
+ARG UBI_MINIMAL_IMAGE
+ARG UBI_MICRO_IMAGE
+
+COPY --from=microbase /var/lib/rpm/ /tmp/micro-rpm-db/
+COPY artifacts/rpm-lock.json /tmp/rpm-lock.json
+COPY scripts/install-rpm-lock.py /tmp/rpm-tools/install-rpm-lock.py
+COPY scripts/lib/rpm_lock.py /tmp/rpm-tools/lib/rpm_lock.py
 
 WORKDIR /tmp/clickhouse
 
@@ -17,15 +26,6 @@ WORKDIR /tmp/clickhouse
 # only explicitly writable runtime paths are assigned to 101:0.
 # hadolint ignore=DL3041
 RUN microdnf install -y dnf gzip tar \
-    && mkdir -p /runtime \
-    && dnf install -y \
-        --installroot=/runtime \
-        --releasever=9 \
-        --setopt=install_weak_deps=0 \
-        --setopt=keepcache=0 \
-        bash ca-certificates coreutils-single gzip tzdata \
-    && dnf clean all \
-    && microdnf clean all \
     && arch="${TARGETARCH:-}" \
     && if [ -z "${arch}" ]; then \
          case "$(uname -m)" in \
@@ -35,6 +35,11 @@ RUN microdnf install -y dnf gzip tar \
          esac; \
        fi \
     && case "${arch}" in amd64|arm64) ;; *) echo "Unsupported TARGETARCH: ${arch}" >&2; exit 1 ;; esac \
+    && python3 /tmp/rpm-tools/install-rpm-lock.py \
+         --lock /tmp/rpm-lock.json --architecture "${arch}" \
+         --builder-image "${UBI_MINIMAL_IMAGE}" --runtime-image "${UBI_MICRO_IMAGE}" \
+    && dnf clean all \
+    && microdnf clean all \
     && for package in clickhouse-common-static clickhouse-server clickhouse-client; do \
          archive="${package}-${CLICKHOUSE_VERSION}-${arch}.tgz"; \
          curl --fail --location --proto '=https' --tlsv1.2 \
@@ -68,7 +73,7 @@ RUN microdnf install -y dnf gzip tar \
          /runtime/var/lib/clickhouse \
          /runtime/var/log/clickhouse-server
 
-FROM ${UBI_MICRO_IMAGE}
+FROM microbase
 
 ARG CLICKHOUSE_VERSION="26.8.2.7"
 

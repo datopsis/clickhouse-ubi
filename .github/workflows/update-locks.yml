@@ -1,0 +1,58 @@
+name: Update RPM lock
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - Containerfile
+      - Containerfile.scap
+      - artifacts/rpm-lock.json
+      - scripts/update-rpm-lock.sh
+      - scripts/lib/**
+      - scripts/install-rpm-lock.py
+      - .github/scripts/check_artifact_lock.py
+      - .github/workflows/update-locks.yml
+      - tests/test_rpm_lock.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-locks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rpm-lock:
+    name: regenerate RPM lock
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # The proposed Containerfile pins are the update inputs. Validate the
+      # output, not the old lock, so a base refresh can produce its new lock.
+      - name: Resolve both architectures twice with native Podman
+        run: |
+          bash scripts/update-rpm-lock.sh /tmp/rpm-lock-first.json
+          bash scripts/update-rpm-lock.sh /tmp/rpm-lock-second.json
+          cmp /tmp/rpm-lock-first.json /tmp/rpm-lock-second.json
+          cp /tmp/rpm-lock-second.json artifacts/rpm-lock.json
+
+      - name: Validate proposed lock and retain diff
+        run: |
+          python3 .github/scripts/check_artifact_lock.py
+          git diff -- artifacts/rpm-lock.json > rpm-lock.patch
+
+      # These files are a proposal only; this workflow has no write permission.
+      - name: Upload proposed lock for review
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: rpm-lock-${{ github.sha }}
+          path: |
+            artifacts/rpm-lock.json
+            rpm-lock.patch
+          if-no-files-found: error
+          retention-days: 14

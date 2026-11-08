@@ -1,0 +1,340 @@
+{
+  "architectures": {
+    "amd64": [
+      {
+        "nevra": "alternatives-0:1.24-2.el9.x86_64",
+        "sha256": "1c520b9bf7b592d936bb347a5107702e51678e160b88ecfbba6a30e35e47d24e",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/a/alternatives-1.24-2.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "basesystem-0:11-13.el9.noarch",
+        "sha256": "f498b0813fa1a825d550e8e3a9e42255eabfa18e6fc96adfc6cc8fa7e16dd513",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/b/basesystem-11-13.el9.noarch.rpm"
+      },
+      {
+        "nevra": "bash-0:5.1.8-9.el9.x86_64",
+        "sha256": "d3adf8b09aa0bf935c67aa12444e0ee02f70a82c2682bfb2b02bda0a989bb806",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/b/bash-5.1.8-9.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "ca-certificates-0:2026.2.92_v9.0.319-90.3.el9_8.noarch",
+        "sha256": "5d29ecb5c3b2958308700381a119d623741d07e313d870dedfaf84e5c9df85cb",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/c/ca-certificates-2026.2.92_v9.0.319-90.3.el9_8.noarch.rpm"
+      },
+      {
+        "nevra": "coreutils-single-0:8.32-41.el9_8.1.x86_64",
+        "sha256": "2698ba4391e97302051fd94d041b85048ffaba88425f0e79badcd1e362a5baba",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/c/coreutils-single-8.32-41.el9_8.1.x86_64.rpm"
+      },
+      {
+        "nevra": "filesystem-0:3.16-5.el9.x86_64",
+        "sha256": "9567592e6e32a9ebd45584cc4feb5d00812f143fcb2d8cd8b1d95108f4f66a2d",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/f/filesystem-3.16-5.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "findutils-1:4.8.0-7.el9.x86_64",
+        "sha256": "a6328afea0a11647b7fb5c48436f0af6c795407bac0650676d3196dd47070de6",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/f/findutils-4.8.0-7.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "glibc-0:2.34-284.el9_8.4.x86_64",
+        "sha256": "41588f37b59bb113823d4a038632a40f2a641829a7e3626dcb79a941dd2bdabe",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/g/glibc-2.34-284.el9_8.4.x86_64.rpm"
+      },
+      {
+        "nevra": "glibc-common-0:2.34-284.el9_8.4.x86_64",
+        "sha256": "c521133554c6f792d3367ef39889ebb4f2ce3675c0b634b8b0841d0eba06dca7",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/g/glibc-common-2.34-284.el9_8.4.x86_64.rpm"
+      },
+      {
+        "nevra": "glibc-minimal-langpack-0:2.34-284.el9_8.4.x86_64",
+        "sha256": "83b594d2d9a17d633f978e419464b81fc6827707db912578fae9fb5ab37cbae7",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/g/glibc-minimal-langpack-2.34-284.el9_8.4.x86_64.rpm"
+      },
+      {
+        "nevra": "grep-0:3.6-5.el9.x86_64",
+        "sha256": "5556895ff1817066ca71b50785615e944b0fcc7e1c94c983087c7c691819623d",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/g/grep-3.6-5.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "gzip-0:1.12-2.el9_8.x86_64",
+        "sha256": "a87bdcce45011f232758c01bd99c564b5f6b549d391646cc573a132d22604b85",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/g/gzip-1.12-2.el9_8.x86_64.rpm"
+      },
+      {
+        "nevra": "libacl-0:2.4.0-1.el9_8.x86_64",
+        "sha256": "a81fb7a4d7c946e9bd886ee3c471a4b5040dedbb8ffb2a388120b2094be93cc8",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libacl-2.4.0-1.el9_8.x86_64.rpm"
+      },
+      {
+        "nevra": "libattr-0:2.6.0-1.el9_8.x86_64",
+        "sha256": "9e37537f690c748f7f05faa80966072f118ec722e38ef332fe19cf22b087349f",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libattr-2.6.0-1.el9_8.x86_64.rpm"
+      },
+      {
+        "nevra": "libcap-0:2.48-10.el9_8.1.x86_64",
+        "sha256": "d4805439b10fa551b7535cf30ca28d4d5862132c9c429b2b31221bea7f43263a",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libcap-2.48-10.el9_8.1.x86_64.rpm"
+      },
+      {
+        "nevra": "libffi-0:3.4.2-8.el9.x86_64",
+        "sha256": "dde0012a94c6f3825e605b095b15767d89c2b87a5da097348310d7e87721c645",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libffi-3.4.2-8.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "libgcc-0:11.5.0-14.el9.x86_64",
+        "sha256": "77c66827ffc14df2f43612b26128b1fd58d5c9597d4d4e564aa239b161272872",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libgcc-11.5.0-14.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "libselinux-0:3.6-3.el9.x86_64",
+        "sha256": "ce1cc63a7212c39f5f2a35f719ee38d6418cf081ea78c9317f388d9f41e4a627",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libselinux-3.6-3.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "libsepol-0:3.6-3.el9.x86_64",
+        "sha256": "b98984b2bf42203964cc979ac157df090c63b89a0f5c6560ede01965531c8ffd",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libsepol-3.6-3.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "libsigsegv-0:2.13-4.el9.x86_64",
+        "sha256": "24005c62017797b612d047a2af83a218633b32302a787fabd22e52230db6adc1",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libsigsegv-2.13-4.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "libtasn1-0:4.16.0-10.el9_8.x86_64",
+        "sha256": "f9473f322407f10205b0db98b89cf8f603e9c769e9977250734136df56cbb981",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/l/libtasn1-4.16.0-10.el9_8.x86_64.rpm"
+      },
+      {
+        "nevra": "ncurses-base-0:6.2-12.20210508.el9.noarch",
+        "sha256": "d62dfd41f9688efa2cf1ceedb96084c63e297fbdcfd1e72bc6757c730092b60c",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/n/ncurses-base-6.2-12.20210508.el9.noarch.rpm"
+      },
+      {
+        "nevra": "ncurses-libs-0:6.2-12.20210508.el9.x86_64",
+        "sha256": "f3e1f8e59c7116278aa19b6705a1443f6307d4d6fbdde75a23d2f5d60636cb16",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/n/ncurses-libs-6.2-12.20210508.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "p11-kit-0:0.26.4-1.el9_8.x86_64",
+        "sha256": "a00ba14bfd0fc5dd2818f605f2e0520b52ea4b36167504c2523f92a065c2bdaf",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/p/p11-kit-0.26.4-1.el9_8.x86_64.rpm"
+      },
+      {
+        "nevra": "p11-kit-trust-0:0.26.4-1.el9_8.x86_64",
+        "sha256": "41b84ab0ee4cf914d570a3d648ed98b7de44cef73ea3dfa58ff5eebdec85f42a",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/p/p11-kit-trust-0.26.4-1.el9_8.x86_64.rpm"
+      },
+      {
+        "nevra": "pcre-0:8.44-4.el9.x86_64",
+        "sha256": "e9ddc7d57d4f6e7400b66bcc78b9bafc1f05630e3e0d2a14000bc907f429ddc4",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/p/pcre-8.44-4.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "pcre2-0:10.40-7.el9_8.x86_64",
+        "sha256": "ef2c65a463e1ef1bfbf3d9ee66986e14cca0fbae88343f099dd5b16619276f1f",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/p/pcre2-10.40-7.el9_8.x86_64.rpm"
+      },
+      {
+        "nevra": "pcre2-syntax-0:10.40-7.el9_8.noarch",
+        "sha256": "e7466a43ef2bfda2b1dc07e855b0db743d48b11c0bdc1402e1d2ea6fb23d33a3",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/p/pcre2-syntax-10.40-7.el9_8.noarch.rpm"
+      },
+      {
+        "nevra": "redhat-release-0:9.8-1.0.el9.x86_64",
+        "sha256": "8157ed988fc34dcfeb6429272959471edd5bde4ac212f26611fd54c180391758",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/r/redhat-release-9.8-1.0.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "sed-0:4.8-10.el9.x86_64",
+        "sha256": "45e246453dc9eb1bad6a71c6f349aad1b1b2e1bf3ec645b80f0ed04fe69c960e",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/s/sed-4.8-10.el9.x86_64.rpm"
+      },
+      {
+        "nevra": "setup-0:2.13.7-10.el9.noarch",
+        "sha256": "0891d395ce067121c28932534237ad1ce231f2bfa987411ad62e73a12d11eb6a",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/s/setup-2.13.7-10.el9.noarch.rpm"
+      },
+      {
+        "nevra": "tzdata-0:2026f-1.el9_8.noarch",
+        "sha256": "dca72e34b88f487c4e0c473f156d4207f5e1187a2343e89ce28d46dc34a646aa",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/x86_64/baseos/os/Packages/t/tzdata-2026f-1.el9_8.noarch.rpm"
+      }
+    ],
+    "arm64": [
+      {
+        "nevra": "alternatives-0:1.24-2.el9.aarch64",
+        "sha256": "6f7c0667ac015bc0d40836c9f55c73ebf65a209069f69aa8f58e6b4655c820a8",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/a/alternatives-1.24-2.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "basesystem-0:11-13.el9.noarch",
+        "sha256": "f498b0813fa1a825d550e8e3a9e42255eabfa18e6fc96adfc6cc8fa7e16dd513",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/b/basesystem-11-13.el9.noarch.rpm"
+      },
+      {
+        "nevra": "bash-0:5.1.8-9.el9.aarch64",
+        "sha256": "7dc1febec9c2fb184ed4407f8a188ab267b7e46b3534866f702c6266008ababa",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/b/bash-5.1.8-9.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "ca-certificates-0:2026.2.92_v9.0.319-90.3.el9_8.noarch",
+        "sha256": "5d29ecb5c3b2958308700381a119d623741d07e313d870dedfaf84e5c9df85cb",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/c/ca-certificates-2026.2.92_v9.0.319-90.3.el9_8.noarch.rpm"
+      },
+      {
+        "nevra": "coreutils-single-0:8.32-41.el9_8.1.aarch64",
+        "sha256": "f02630ae597954bb7f79095ee5810c4fb40a03fd63e9bdb0c5b9db6e976755cf",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/c/coreutils-single-8.32-41.el9_8.1.aarch64.rpm"
+      },
+      {
+        "nevra": "filesystem-0:3.16-5.el9.aarch64",
+        "sha256": "484bc41109c49066cf350344150abe144e63263e0fafa0bf12c5a47f853e6a49",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/f/filesystem-3.16-5.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "findutils-1:4.8.0-7.el9.aarch64",
+        "sha256": "158af4d5ecbd8b87f0da762ea1655bd4c86512071a95d8307eda3e0b3991105d",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/f/findutils-4.8.0-7.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "glibc-0:2.34-284.el9_8.4.aarch64",
+        "sha256": "e0c764e8fe65d919ecac0ade8c7156b0214f0d5895c794e22c751b9af31c5c00",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/g/glibc-2.34-284.el9_8.4.aarch64.rpm"
+      },
+      {
+        "nevra": "glibc-common-0:2.34-284.el9_8.4.aarch64",
+        "sha256": "f2019d4f639cceacbc36299d5e6fe913e9f502637d5ede80e57bc92534945f6c",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/g/glibc-common-2.34-284.el9_8.4.aarch64.rpm"
+      },
+      {
+        "nevra": "glibc-minimal-langpack-0:2.34-284.el9_8.4.aarch64",
+        "sha256": "0e9efb74c43a7307813f048daa50e08bee1787fecca71df43ce60a30f27f5c6c",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/g/glibc-minimal-langpack-2.34-284.el9_8.4.aarch64.rpm"
+      },
+      {
+        "nevra": "grep-0:3.6-5.el9.aarch64",
+        "sha256": "583a247a199901d44dc8a96d46010e15f6211f98f7c61ba089825155b0562520",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/g/grep-3.6-5.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "gzip-0:1.12-2.el9_8.aarch64",
+        "sha256": "efafc848fdaa3a8e5e77baddc07abc7d800dc973efd44ecf492bc64dca4fabe6",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/g/gzip-1.12-2.el9_8.aarch64.rpm"
+      },
+      {
+        "nevra": "libacl-0:2.4.0-1.el9_8.aarch64",
+        "sha256": "70ba010505e9805254f772c3dd9cd9e6176fc9e007e8c9be7204c44f85d8bbd2",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libacl-2.4.0-1.el9_8.aarch64.rpm"
+      },
+      {
+        "nevra": "libattr-0:2.6.0-1.el9_8.aarch64",
+        "sha256": "ec08036348dbe2ee41645bdb96eb485b9db5121ec0524258b0639426a22a49bc",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libattr-2.6.0-1.el9_8.aarch64.rpm"
+      },
+      {
+        "nevra": "libcap-0:2.48-10.el9_8.1.aarch64",
+        "sha256": "1ac3014c33b84d7a492b99d46d47940b096e034a3d5886e16ace7159724be012",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libcap-2.48-10.el9_8.1.aarch64.rpm"
+      },
+      {
+        "nevra": "libffi-0:3.4.2-8.el9.aarch64",
+        "sha256": "d33e180b97a603542cb6f1a78b1c3b0ce4af1bc59ee0bb32620c98a629726bc4",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libffi-3.4.2-8.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "libgcc-0:11.5.0-14.el9.aarch64",
+        "sha256": "6923218fdef581189a4b51c7ba158083597f1c6df08cae021a1d90e9d61938a9",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libgcc-11.5.0-14.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "libselinux-0:3.6-3.el9.aarch64",
+        "sha256": "3d7249adbf19206e319cd24acc2e01b0da39975aa3e5af73bdb6c6d438108fac",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libselinux-3.6-3.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "libsepol-0:3.6-3.el9.aarch64",
+        "sha256": "496ed9e2d7fac9704afe764eab4c2c43b4a47e8c229c14498dd19786f98f80c0",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libsepol-3.6-3.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "libsigsegv-0:2.13-4.el9.aarch64",
+        "sha256": "0998ac158161c9d5f3b97c5dc6e35becd84da0ddc5d347a8af581ada529b3b5c",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libsigsegv-2.13-4.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "libtasn1-0:4.16.0-10.el9_8.aarch64",
+        "sha256": "322524934c9b1f0714d2299705dbd41ec93451078e8144babc88c51bd19f6e07",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/l/libtasn1-4.16.0-10.el9_8.aarch64.rpm"
+      },
+      {
+        "nevra": "ncurses-base-0:6.2-12.20210508.el9.noarch",
+        "sha256": "d62dfd41f9688efa2cf1ceedb96084c63e297fbdcfd1e72bc6757c730092b60c",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/n/ncurses-base-6.2-12.20210508.el9.noarch.rpm"
+      },
+      {
+        "nevra": "ncurses-libs-0:6.2-12.20210508.el9.aarch64",
+        "sha256": "b5dd452392d2f97bb050c9f5e5376998652c567dcbd8f035d26659b1b551b5c9",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/n/ncurses-libs-6.2-12.20210508.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "p11-kit-0:0.26.4-1.el9_8.aarch64",
+        "sha256": "b9391ea6618098782c9325ccda3c9ca8bc0f3b035bd4f113a793cea18026c75e",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/p/p11-kit-0.26.4-1.el9_8.aarch64.rpm"
+      },
+      {
+        "nevra": "p11-kit-trust-0:0.26.4-1.el9_8.aarch64",
+        "sha256": "a57761123cd5836faf3d40251d16124557ffb452443bfa14cf59ac16e6c99970",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/p/p11-kit-trust-0.26.4-1.el9_8.aarch64.rpm"
+      },
+      {
+        "nevra": "pcre-0:8.44-4.el9.aarch64",
+        "sha256": "099feef7e71b82cf0234e37d824fc81353d51dee55694e05181fa686ab50efae",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/p/pcre-8.44-4.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "pcre2-0:10.40-7.el9_8.aarch64",
+        "sha256": "40fd0cd92f4cf824fb5186128d360bdc0a8a9f70c9f820b8c0efda4afec75cc8",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/p/pcre2-10.40-7.el9_8.aarch64.rpm"
+      },
+      {
+        "nevra": "pcre2-syntax-0:10.40-7.el9_8.noarch",
+        "sha256": "e7466a43ef2bfda2b1dc07e855b0db743d48b11c0bdc1402e1d2ea6fb23d33a3",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/p/pcre2-syntax-10.40-7.el9_8.noarch.rpm"
+      },
+      {
+        "nevra": "redhat-release-0:9.8-1.0.el9.aarch64",
+        "sha256": "fa7f1d93927c7f8c6f6563a8d221af659074f026e4b12cd74d456b0db1878164",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/r/redhat-release-9.8-1.0.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "sed-0:4.8-10.el9.aarch64",
+        "sha256": "b73d314a8ef322a690bb69c49cb0dbd9a5ff18d2ba6b2973e18d2c076a52b62a",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/s/sed-4.8-10.el9.aarch64.rpm"
+      },
+      {
+        "nevra": "setup-0:2.13.7-10.el9.noarch",
+        "sha256": "0891d395ce067121c28932534237ad1ce231f2bfa987411ad62e73a12d11eb6a",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/s/setup-2.13.7-10.el9.noarch.rpm"
+      },
+      {
+        "nevra": "tzdata-0:2026f-1.el9_8.noarch",
+        "sha256": "dca72e34b88f487c4e0c473f156d4207f5e1187a2343e89ce28d46dc34a646aa",
+        "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/aarch64/baseos/os/Packages/t/tzdata-2026f-1.el9_8.noarch.rpm"
+      }
+    ]
+  },
+  "base_images": {
+    "builder": "registry.access.redhat.com/ubi9/ubi-minimal:9.8@sha256:4b79c93106c14ad1c234907f83441ff0e4f8d24e78426a36e159098e9f7e6fa5",
+    "runtime": "registry.access.redhat.com/ubi9/ubi-micro:9.8@sha256:6d9eff186ce3ccf399c1835265e7fd3f83bd112cc3422da2d39fd44e234aab59"
+  },
+  "requested": [
+    "bash",
+    "ca-certificates",
+    "coreutils-single",
+    "gzip",
+    "tzdata"
+  ],
+  "schema_version": 1
+}

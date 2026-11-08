@@ -15,6 +15,7 @@ This is an independent Datopsis packaging project. It is not an official ClickHo
 ## Security properties
 
 - Red Hat UBI 9 Micro runtime, pinned by multi-architecture digest
+- Runtime RPM overlay pinned by exact NEVRA and SHA-256 for AMD64 and ARM64
 - Official ClickHouse release archives, pinned by version and verified with the published SHA-512 checksums
 - No package manager or package download utility in the runtime image
 - Runs as the non-root `clickhouse` user (`101:0`)
@@ -109,6 +110,8 @@ CONTAINER_RUNTIME=podman \
   IMAGE=ghcr.io/datopsis/clickhouse-ubi:test \
   bash tests/smoke.sh
 ```
+
+Refresh runtime RPMs using the [RPM lock procedure](docs/RPM-LOCK.md). Base-image build arguments must match the committed lock; changing a base pin requires a lock refresh.
 
 Build-time arguments are `CLICKHOUSE_VERSION`, `CLICKHOUSE_CHANNEL`, `UBI_MINIMAL_IMAGE`, and `UBI_MICRO_IMAGE`. Release builds should retain immutable UBI digests and an exact ClickHouse version.
 
