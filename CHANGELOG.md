@@ -43,6 +43,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Regenerate hash-pinned CI tool requirements with compatible dependency updates,
+  including the missing transitive packaging dependency, while retaining filelock 3.x.
 - Renamed the source repository and planned GHCR image from
   `clickhouse-server-ubi`/`clickhouse-server-ubi9` to `clickhouse-ubi`, aligning
   the public identity with the `nginx-ubi` and `postgresql-ubi` projects.

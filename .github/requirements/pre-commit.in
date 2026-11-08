@@ -1,0 +1,13 @@
+# Compile with Python 3.13 and pip-tools 7.6.2; see pre-commit.txt for the command.
+# Preserve the existing pins except for the compatible updates from PR #21.
+cfgv==3.5.0
+distlib==0.4.4
+# Keep filelock on 3.x for compatibility with the pinned CI tools.
+filelock==3.32.5
+identify==2.6.20
+nodeenv==1.12.0
+platformdirs==4.14.2
+pre-commit==4.7.0
+python-discovery==1.9.0
+PyYAML==6.0.3
+virtualenv==21.15.2
