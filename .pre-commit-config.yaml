@@ -47,6 +47,12 @@ repos:
 
   - repo: local
     hooks:
+      - id: rpm-lock
+        name: validate runtime RPM lock and base pins
+        language: python
+        entry: python .github/scripts/check_artifact_lock.py
+        pass_filenames: false
+        files: ^(Containerfile(\.scap)?|artifacts/rpm-lock\.json|scripts/lib/rpm_lock\.py|\.github/scripts/check_artifact_lock\.py)$
       - id: forbid-claude-coauthor
         name: forbid Claude co-author trailers
         language: pygrep
