@@ -21,7 +21,7 @@ content changes, and rerunning both native architecture jobs.
 
 | Input | Pin | Verification |
 | --- | --- | --- |
-| Scanner base | UBI Minimal 9.8 manifest digest `sha256:7fbeae18dc9476399f565e68255f602a3374ea8614ba3d14843565131a13ff93` | BuildKit resolves the digest for the native runner architecture. |
+| Scanner base | UBI Minimal 9.8 manifest digest `sha256:4b79c93106c14ad1c234907f83441ff0e4f8d24e78426a36e159098e9f7e6fa5` | BuildKit resolves the digest for the native runner architecture. |
 | OpenSCAP engine | UBI AppStream RPM `openscap-scanner-1.3.14-1.el9_8` | The build fails if that exact NEVRA cannot be installed; the complete resulting RPM inventory and `oscap --version` are retained so dependency drift is visible. |
 | ComplianceAsCode content | Release `0.1.82` ZIP | Archive SHA-256 `765e84bdce7f9055f9b9c2dd0ee2b713d4255f8eec94eac6d35ea4973c28919c` is checked before extraction. |
 | RHEL 9 data stream | `ssg-rhel9-ds.xml` from release `0.1.82` | Data-stream SHA-256 `92204daafbf4f38011671ef034fae4cffb48f708516186710346a9ec702a1f8f` is checked at build and recorded at evaluation. |
