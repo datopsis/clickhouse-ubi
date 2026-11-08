@@ -31,6 +31,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Native CA-issued TLS rehearsal covering HTTPS, native TCP, connected/disconnected outbound trust, negative cases, renewal, rollback, and operator evidence procedures.
 - Dedicated loopback-only TLS health client configuration that supports CA-issued certificate chains without weakening server-side outbound verification.
 
+### Security
+
+- Refresh all UBI 9.8 Micro and Minimal base digests, including the OpenSCAP
+  tool image, to pick up fixed PCRE2 and CA certificate packages on both native
+  architectures. Rebuild the runtime RPM overlay against current UBI repositories.
+
 ### Changed
 
 - Renamed the source repository and planned GHCR image from
