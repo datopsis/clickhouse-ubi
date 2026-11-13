@@ -27,12 +27,12 @@ cleanup() {
 }
 trap cleanup EXIT
 cp "${root}/Containerfile" "${workdir}/Containerfile.input"
-cp "${root}"/scripts/lib/{rpm_lock,resolve_rpm_lock}.py "${workdir}/"
+cp "${root}"/scripts/lib/{rpm_lock,resolve_rpm_lock,ubi_repos}.py "${workdir}/"
 cat > "${workdir}/Containerfile" <<EOF
 # Always execute the resolver natively, including when resolving foreign RPMs.
 FROM --platform=linux/${resolver_architecture} ${minimal_image}
 RUN microdnf install -y dnf && microdnf clean all
-COPY rpm_lock.py resolve_rpm_lock.py /resolver/
+COPY rpm_lock.py resolve_rpm_lock.py ubi_repos.py /resolver/
 COPY Containerfile.input /inputs/Containerfile
 RUN python3 /resolver/resolve_rpm_lock.py --root /inputs --output /rpm-lock.json
 EOF

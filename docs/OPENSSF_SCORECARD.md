@@ -44,7 +44,7 @@ The initial local measurement on 2026-09-06 used Scorecard 5.5.0 against commit 
 | Security-Policy | 10 | `SECURITY.md` documents private reporting and disclosure expectations. |
 | Signed-Releases | N/A | The first tagged GitHub release will include `.sigstore.json` and `.intoto.jsonl` evidence. |
 | Token-Permissions | 0 | Write access is moved from workflow scope to the release job; reruns should report 10. |
-| Vulnerabilities | 10 | Trivy and Grype gate fixed high/critical findings, while Scorecard also checks OSV data. |
+| Vulnerabilities | 10 | Trivy and Grype gate high/critical findings under the [UBI-installable fix policy](../SECURITY.md#ubi-installable-fix-gate), while Scorecard also checks OSV data. |
 
 Scores can change when Scorecard changes its checks or when repository history changes. Review the individual findings instead of treating the aggregate number as a permanent guarantee.
 
