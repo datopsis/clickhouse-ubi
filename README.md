@@ -22,7 +22,7 @@ This is an independent Datopsis packaging project. It is not an official ClickHo
 - Compatible with a read-only root filesystem
 - Requires no Linux capabilities for its baseline configuration
 - Restricts the default user to localhost unless a password is supplied
-- Native AMD64 and ARM64 CI smoke tests, repository linting, workflow auditing, and blocking Trivy and Grype scans for fixed high and critical vulnerabilities
+- Native AMD64 and ARM64 CI smoke tests, repository linting, workflow auditing, and Trivy/Grype high and critical vulnerability admission under the [UBI-installable fix policy](SECURITY.md#ubi-installable-fix-gate)
 - Syft-generated SPDX JSON inventories retained for CI builds and attached to releases
 - Multi-architecture release images for `linux/amd64` and `linux/arm64`
 - Keyless Cosign signatures, SBOM attestations, and build provenance on tagged releases
