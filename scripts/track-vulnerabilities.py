@@ -30,7 +30,7 @@ def state(directory, jobs):
         if any(not isinstance(report, dict) for report in decoded):
             raise ValueError('invalid report')
     except (ValueError, OSError):
-        decoded = []  # Corrupt evidence must also notify, never look like resolution.
+        decoded = []  # Corrupt evidence must fail, never look like resolution.
     for arch in ['amd64', 'arm64']:
         reports = [report for report in decoded if report.get('architecture') == arch]
         if len(reports) != 1 or reports[0].get('schema_version') != 1:
@@ -61,10 +61,6 @@ def render(value, run_url):
              '--- | --- | --- | --- | --- | --- | ---']
     attention = any(deferred.values())
     for arch, rows in value['architectures'].items():
-        if isinstance(rows, dict):
-            lines.append(f'{arch} | — | Missing admission evidence | — | — | — | **block**')
-            attention = True
-            continue
         for row in rows:
             if row['decision'] == 'unfixed':
                 continue
@@ -89,7 +85,9 @@ def update(repo, value, run_url, call=api):
         return None
     issue = issues[0]
     desired = 'open' if attention else 'closed'
-    if fingerprint in issue['body'] and issue['state'] == desired:
+    if fingerprint in issue['body']:
+        if issue['state'] != desired:
+            return call(repo, f'issues/{issue["number"]}', 'PATCH', {'state': desired})
         return issue
     # Comment before updating the fingerprint, so a failed notification retries.
     call(repo, f'issues/{issue["number"]}/comments', 'POST', {'body': 'Deferred set changed.\n\n' + body})

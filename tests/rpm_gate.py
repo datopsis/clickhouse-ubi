@@ -52,6 +52,28 @@ class RpmTests(unittest.TestCase):
             with tempfile.TemporaryDirectory() as tmp, self.assertRaises(ValueError):
                 configure(base, tmp, 'amd64')
 
+    def test_repository_errors_and_empty_sacks_fail_closed(self):
+        for failure in ['metadata', 'empty', 'gpg']:
+            base = Mock()
+            base.conf.substitutions = {}
+            with tempfile.TemporaryDirectory() as tmp:
+                repo_file = Path(tmp) / 'ubi.repo'
+                repo_file.write_text('test repo configuration')
+                repos = [SimpleNamespace(id='ubi-9-' + name + '-rpms',
+                                         repofile=str(repo_file), baseurl=['https://example.invalid'],
+                                         mirrorlist='', metalink='', gpgcheck=failure != 'gpg')
+                         for name in ['baseos', 'appstream', 'codeready-builder']]
+                base.repos.iter_enabled.return_value = repos
+                if failure == 'metadata':
+                    base.fill_sack.side_effect = RuntimeError('metadata unavailable')
+                base.sack.query.return_value.available.return_value.filter.return_value = []
+                with self.assertRaises((ValueError, RuntimeError)):
+                    configure(base, tmp, 'arm64')
+                if failure != 'gpg':
+                    self.assertTrue(all(r.skip_if_unavailable is False for r in repos))
+                    self.assertTrue(all(r.metadata_expire == 0 for r in repos))
+
+
 
 if __name__ == '__main__':
     unittest.main()

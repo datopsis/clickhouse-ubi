@@ -3,7 +3,7 @@ import hashlib
 from pathlib import Path
 
 RPM_ARCH = {'amd64': 'x86_64', 'arm64': 'aarch64'}
-EXPECTED_REPOS = {'ubi-9-baseos-rpms', 'ubi-9-appstream-rpms'}
+EXPECTED_REPOS = {'ubi-9-baseos-rpms', 'ubi-9-appstream-rpms', 'ubi-9-codeready-builder-rpms'}
 
 
 def configure(base, directory, architecture):
