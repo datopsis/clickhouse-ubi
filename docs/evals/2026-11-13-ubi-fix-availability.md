@@ -49,3 +49,13 @@ until the workflows run on trusted main/a release tag. Unit tests cover issue
 creation, no-op updates, publication/removal, closure/reopening, missing evidence,
 and vendor-version changes. A changed job result or unfixed/blocking inventory
 alone does not trigger a tracking comment.
+
+## Native scanner evidence
+
+[PR #30](https://github.com/datopsis/clickhouse-ubi/pull/30) records the native
+before/after run links and per-scanner, per-architecture counts. The baseline
+[run 43423845975](https://github.com/datopsis/clickhouse-ubi/actions/runs/43423845975)
+uses main's unchanged image inputs and RPM lock, with complete report collection
+added. The after run uses the refreshed lock. Counts are scanner finding records,
+not deduplicated CVE IDs; gate counts use High/Critical severity. No claim of
+remediation or deferral is inferred from workflow status alone.
