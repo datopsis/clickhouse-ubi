@@ -37,6 +37,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Security
 
+- Gate fixable High/Critical RPM findings on fixes published by the same UBI
+  repositories used for lock resolution, per architecture, with librpm EVR
+  comparison. Report unavailable vendor fixes as deferred; fail closed on query
+  errors and all fixable non-RPM findings.
+- Retain complete Trivy/Grype reports and admission evidence, require both native
+  release scans before signing, and track changes to deferred fixes in one issue
+  from scheduled trusted-main CI only.
+
 - Refresh all UBI 9.8 Micro and Minimal base digests, including the OpenSCAP
   tool image, to pick up fixed PCRE2 and CA certificate packages on both native
   architectures. Rebuild the runtime RPM overlay against current UBI repositories.

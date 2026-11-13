@@ -7,28 +7,14 @@ from pathlib import Path
 
 import dnf
 
+from ubi_repos import configure
+
 from rpm_lock import ARCHITECTURES, REQUESTED, base_images, digest, render, validate, verify_rpm
 
 
 def resolve(architecture):
-    rpm_arch = ARCHITECTURES[architecture]
     with tempfile.TemporaryDirectory(prefix="rpm-resolver-") as directory, dnf.Base() as base:
-        for name in ("root", "cache", "log", "persist"):
-            Path(directory, name).mkdir()
-        base.conf.read()
-        base.conf.installroot = directory + "/root"
-        base.conf.cachedir = directory + "/cache"
-        base.conf.logdir = directory + "/log"
-        base.conf.persistdir = directory + "/persist"
-        base.conf.install_weak_deps = False
-        base.conf.arch = rpm_arch
-        base.conf.ignorearch = True
-        base.conf.substitutions["arch"] = rpm_arch
-        base.conf.substitutions["basearch"] = rpm_arch
-        base.conf.substitutions["releasever"] = "9"
-        base.conf.module_platform_id = "platform:el9"
-        base.read_all_repos()
-        base.fill_sack(load_system_repo=False)
+        configure(base, directory, architecture)
         for name in REQUESTED:
             base.install(name)
         base.resolve()
